@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body class="d-flex flex-column min-vh-100">
-<nav class="navbar navbar-expand-lg bg-orange">
+<nav class="navbar navbar-expand-lg bg-blue">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="index.html">
             <img src="img/Logo Minimalista Materiais de Construção Azul e Laranja.png" alt="Logan" height="130" class="rounded-circle me-2">
@@ -28,7 +28,7 @@
                         <li><a class="dropdown-item" href="construcao.html">Para sua construção</a></li>
                         <li><a class="dropdown-item" href="hidraulicos.html">Materiais hidráulicos</a></li>
                         <li><a class="dropdown-item" href="eletricos.html">Materiais elétricos</a></li>
-                        <li><a class="dropdown-item" href="produtos.html#tintas">Tintas</a></li>
+                        <li><a class="dropdown-item" href="tintas.html">Tintas</a></li>
                         <li><a class="dropdown-item" href="produtos.html#vernizes">Vernizes</a></li>
                         <li><a class="dropdown-item" href="produtos.html#esmaltes">Esmaltes</a></li>
                         <li><a class="dropdown-item" href="produtos.html#ferramentas">Ferramentas</a></li>
@@ -46,224 +46,152 @@
         </div>
     </div>
 </nav>
-
 <main>
-           
-<div class="container">
-    <m1>  
-  <div class="row">
-      <div class="col-xl-4 col-sm-6 g-5">
-          <div class="card" style="background-color: transparent; border: none;">
-              <img src="img/construção/areia.webp" class="card-img-top" alt="Areia Média 20Kg Pedrasil">
-              <div class="card-body">
-                  <h5 class="card-title">Areia Média 20Kg Pedrasil
-                  <p class="card-text">R$4,99</p>
-               
-                  <button type="button" class="btn btn-primary btn-sm" onclick="adicionarAoCarrinho('Areia Média 20Kg Pedrasil', 4.99);" style="transition: all 0.3s ease; font-weight: bold; float: left;">
-                      Adicionar ao Carrinho
-                  </button>
-                  
-                  <script>
-                  function adicionarAoCarrinho(nomeProduto, precoProduto) {
-                      let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-                      let item = { nome: nomeProduto, preco: precoProduto };
-                  
-                      // Adiciona o item ao carrinho
-                      carrinho.push(item);
-                      localStorage.setItem('carrinho', JSON.stringify(carrinho));
-                  
-                      alert(nomeProduto + " foi adicionado ao carrinho!");
-                  }
-                  
-                  // Para exibir o número de itens no ícone da sacola:
-                  function atualizarSacola() {
-                      let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-                      let qtdItens = carrinho.length;
-                      document.getElementById('sacola').innerHTML = ' (' + qtdItens + ')';
-                  }
-                  
-                  // Chama a função para atualizar a sacola assim que a página carrega
-                  window.onload = atualizarSacola;
-                  </script>
-                  
-                  <a href="compra.html?produto=Camiseta+Classic+Fit+Typesetting&preco=85.90" class="btn btn-success btn-sm" style="transition: all 0.3s ease; font-weight: bold; float: center;">
-                      Comprar
-                  </a>
-              </div>
-          </div>
-      </div>
-
-      <div class="col-xl-4 col-sm-6 g-5">
-          <div class="card" style="background-color: transparent; border: none;">
-              <img src="img/construção/cimento.webp" class="card-img-top" alt="Cimento CPII E-32 50Kg Campeão">
-              <div class="card-body">
-                  <h5 class="card-title">Cimento CPII E-32 50Kg Campeão
-                  <p class="card-text">R$27,32</p>
-                  <button type="button" class="btn btn-primary btn-sm" onclick="adicionarAoCarrinho('Cimento CPII E-32 50Kg Campeão', 27,32);" style="transition: all 0.3s ease; font-weight: bold; float: left;">
-                      Adicionar ao Carrinho
-                  </button>
-
-                  <a href="compra.html?produto=Camiseta+Classic+Fit+Typesetting&preco=85.90" class="btn btn-success btn-sm" style="transition: all 0.3s ease; font-weight: bold; float: center;">
-                      Comprar
-                  </a>
-                  <div class="modal fade" id="modalComprar" tabindex="-1" aria-labelledby="modalComprarLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="modalComprarLabel">Pedido Finalizado</h1>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                                  Agradecemos por escolher nossos produtos. 
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
-                                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Finalizar</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-      
-              </div>
-          </div>
-      </div>
-      
-        <div class="col-xl-4 col-sm-6 g-5">
-            <div class="card" style="background-color: transparent; border: none;">
-                <img src="img/construção/cimento2.webp" class="card-img-top" alt="Cimento CPIII 32RS 50Kg CSN">
-                <div class="card-body">
-                    <h5 class="card-title">Cimento CPIII 32RS 50Kg CSN
-                    <p class="card-text">R$27,90</p>
-                    <button type="button" class="btn btn-primary btn-sm" onclick="adicionarAoCarrinho('Cimento CPIII 32RS 50Kg CSN', 27.90);" style="transition: all 0.3s ease; font-weight: bold; float: left;">
-                      Adicionar ao Carrinho
-                  </button>
-                  <a href="compra.html?produto=Camiseta+Classic+Fit+Typesetting&preco=85.90" class="btn btn-success btn-sm" style="transition: all 0.3s ease; font-weight: bold; float: center;">
-                      Comprar
-                  </a>
+    <div class="container">
+        <div class="row">
+            <!-- Produto 1 -->
+            <div class="col-xl-4 col-sm-6 g-5">
+                <div class="card" style="background-color: transparent; border: none;">
+                    <img src="img/construção/areia.webp" class="card-img-top" alt="Areia Média 20Kg Pedrasil">
+                    <div class="card-body">
+                        <h5 class="card-title">Areia Média 20Kg Pedrasil</h5>
+                        <p class="card-text">R$4,99</p>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="adicionarAoCarrinho('Areia Média 20Kg Pedrasil', 4.99);" style="transition: all 0.3s ease; font-weight: bold;">
+                            Adicionar ao Carrinho
+                        </button>
+                        <a href="compra.html?produto=Eletroduto+Corrugado+25mm+Amarelo+Adtex+50+Metros&preco=65.90" class="btn btn-danger btn-sm" style="transition: all 0.3s ease; font-weight: bold;">
+                            Comprar
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-<div class="modal fade" id="modalComprar" tabindex="-1" aria-labelledby="modalComprarLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="modalComprarLabel">Pedido Finalizado</h1>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                                  Agradecemos por escolher nossos produtos. 
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
-                                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Finalizar</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-        
 
-      
-        <div class="col-xl-4 col-sm-6 g-5">
-            <div class="card" style="background-color: transparent; border: none;">
-                <img src="img/construção/vergalhao.webp" class="card-img-top" alt="Vergalhão Aço Nervurado CA-50 10mm 3/8" Barra 12m Simec">
-                <div class="card-body">
-                    <h5 class="card-title">Vergalhão Aço Nervurado CA-50 10mm 3/8" Barra 12m Simec
-
-                    <p class="card-text">R$55,90</p>
-                    <button type="button" class="btn btn-primary btn-sm" onclick="adicionarAoCarrinho('Vergalhão Aço Nervurado CA-50 10mm 3/8 Barra 12m Simec', 55.90);" style="transition: all 0.3s ease; font-weight: bold; float: left;">
-                      Adicionar ao Carrinho
-                  </button>
-                  <a href="compra.html?produto=Camiseta+Classic+Fit+Typesetting&preco=85.90" class="btn btn-success btn-sm" style="transition: all 0.3s ease; font-weight: bold; float: center;">
-                      Comprar
-                  </a>
+            <!-- Produto 2 -->
+            <div class="col-xl-4 col-sm-6 g-5">
+                <div class="card" style="background-color: transparent; border: none;">
+                    <img src="img/construção/cimento.webp" class="card-img-top" alt="Cimento CPII E-32 50Kg Campeão">
+                    <div class="card-body">
+                        <h5 class="card-title">Cimento CPII E-32 50Kg Campeão</h5>
+                        <p class="card-text">R$27,32</p>
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-primary btn-sm" onclick="adicionarAoCarrinho('Cimento CPII E-32 50Kg Campeão', 27.32);" style="transition: all 0.3s ease; font-weight: bold;">
+                                Adicionar ao Carrinho
+                            </button>
+                            <a href="compra.html?produto=Cimento+CPII+Campeão&preco=27.32" class="btn btn-danger btn-sm" style="transition: all 0.3s ease; font-weight: bold;">
+                                Comprar
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="modal fade" id="modalCheddarAustraliano" tabindex="-1" aria-labelledby="modalCheddarAustralianoLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="modalCheddarAustralianoLabel">Pedido Finalizado</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <!-- Produto 3 -->
+            <div class="col-xl-4 col-sm-6 g-5">
+                <div class="card" style="background-color: transparent; border: none;">
+                    <img src="img/construção/cimento2.webp" class="card-img-top" alt="Cimento CPIII 32RS 50Kg CSN">
+                    <div class="card-body">
+                        <h5 class="card-title">Cimento CPIII 32RS 50Kg CSN</h5>
+                        <p class="card-text">R$27,90</p>
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-primary btn-sm fw-bold" onclick="adicionarAoCarrinho('Cimento CPIII 32RS 50Kg CSN', 27.90);" style="transition: all 0.3s ease; font-weight: bold;">
+                                Adicionar ao Carrinho
+                            </button>
+                            <a href="compra.html?produto=Cimento+CPIII+CSN&preco=27.90" class="btn btn-danger btn-sm fw-bold" style="transition: all 0.3s ease; font-weight: bold;">
+                                Comprar
+                            </a>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        Agradecemos por escolher nossos produtos. Esperamos que você desfrute do sabor e da qualidade. Sua satisfação é muito importante para nós. Se tiver alguma dúvida ou sugestão, não hesite em nos contatar.
+                </div>
+            </div>
+
+            <!-- Produto 4 -->
+            <div class="col-xl-4 col-sm-6 g-5">
+                <div class="card" style="background-color: transparent; border: none;">
+                    <img src="img/construção/vergalhao.webp" class="card-img-top" alt="Vergalhão Aço Nervurado CA-50 10mm 3/8 Barra 12m Simec">
+                    <div class="card-body">
+                        <h5 class="card-title">Vergalhão Aço Nervurado CA-50 10mm 3/8" Barra 12m Simec</h5>
+                        <p class="card-text">R$55,90</p>
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-primary btn-sm fw-bold" onclick="adicionarAoCarrinho('Vergalhão Aço Nervurado CA-50 10mm 3/8 Barra 12m Simec', 55.90);" style="transition: all 0.3s ease; font-weight: bold;">
+                                Adicionar ao Carrinho
+                            </button>
+                            <a href="compra.html?produto=Vergalhão+Simec&preco=55.90" class="btn btn-danger btn-sm fw-bold" style="transition: all 0.3s ease; font-weight: bold;">
+                                Comprar
+                            </a>
+                        </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Salvar</button>
+                </div>
+            </div>
+
+            <!-- Produto 5 -->
+            <div class="col-xl-4 col-sm-6 g-5">
+                <div class="card" style="background-color: transparent; border: none;">
+                    <img src="img/construção/tijolo.webp" class="card-img-top" alt="Bloco Cerâmico de Vedação 11,5x14x24cm Nova União">
+                    <div class="card-body">
+                        <h5 class="card-title">Bloco Cerâmico de Vedação 11,5x14x24cm Nova União</h5>
+                        <p class="card-text">R$0,90</p>
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-primary btn-sm fw-bold" onclick="adicionarAoCarrinho('Bloco Cerâmico de Vedação 11,5x14x24cm Nova União', 0.90);" style="transition: all 0.3s ease; font-weight: bold;">
+                                Adicionar ao Carrinho
+                            </button>
+                            <a href="compra.html?produto=Tijolo+Nova+União&preco=0.90" class="btn btn-danger btn-sm fw-bold" style="transition: all 0.3s ease; font-weight: bold;">
+                                Comprar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 6 -->
+            <div class="col-xl-4 col-sm-6 g-5">
+                <div class="card" style="background-color: transparent; border: none;">
+                    <img src="img/construção/telha.webp" class="card-img-top" alt="Telha Ondulada Cimentícia Cinza 5mm 2,44x1,1m Brasilit">
+                    <div class="card-body">
+                        <h5 class="card-title">Telha Ondulada Cimentícia Cinza 5mm 2,44x1,1m Brasilit</h5>
+                        <p class="card-text">R$49,90</p>
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-primary btn-sm fw-bold" onclick="adicionarAoCarrinho('Telha Ondulada Cimentícia Cinza 5mm 2,44x1,1m Brasilit', 49.90);" style="transition: all 0.3s ease; font-weight: bold;">
+                                Adicionar ao Carrinho
+                            </button>
+                            <a href="compra.html?produto=Telha+Brasilit&preco=49.90" class="btn btn-danger btn-sm fw-bold" style="transition: all 0.3s ease; font-weight: bold;">
+                                Comprar
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</main>
 
-       
-        <div class="col-xl-4 col-sm-6 g-5">
-            <div class="card" style="background-color: transparent; border: none;">
-                <img src="img/construção/tijolo.webp" class="card-img-top" alt="Bloco Cerâmico de Vedação 11,5x14x24cm Nova União">
-                <div class="card-body">
-                    <h5 class="card-title">Bloco Cerâmico de Vedação 11,5x14x24cm Nova União
-                    <p class="card-text">R$0,90</p>
-                    <button type="button" class="btn btn-primary btn-sm" onclick="adicionarAoCarrinho('Bloco Cerâmico de Vedação 11,5x14x24cm Nova União', 0.90);" style="transition: all 0.3s ease; font-weight: bold; float: left;">
-                      Adicionar ao Carrinho
-                  </button>
-                  <a href="compra.html?produto=Camiseta+Classic+Fit+Typesetting&preco=85.90" class="btn btn-success btn-sm" style="transition: all 0.3s ease; font-weight: bold; float: center;">
-                      Comprar
-                  </a>
-                </div>
-            </div>
+<footer class="bg-orange text-white py-4 mt-auto">
+    <div class="container text-center">
+        <p><strong>Endereço:</strong> Rua Mariana, 360 - Centro, Ipatinga-MG</p>
+        <p><strong>Telefone:</strong> (31) 5678-1234</p>
+        <div class="d-flex justify-content-center gap-4 mt-3">
+            <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white fs-4"><i class="bi bi-whatsapp"></i></a>
         </div>
+    </div>
+</footer>
 
-        
-        <div class="modal fade" id="modalBaconCheddar" tabindex="-1" aria-labelledby="modalBaconCheddarLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="modalBaconCheddarLabel">Pedido Finalizado</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        Agradecemos por escolher nossos produtos. Esperamos que você desfrute do sabor e da qualidade. Sua satisfação é muito importante para nós. Se tiver alguma dúvida ou sugestão, não hesite em nos contatar.
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Salvar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function adicionarAoCarrinho(nomeProduto, precoProduto) {
+        let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+        let item = { nome: nomeProduto, preco: precoProduto };
+        carrinho.push(item);
+        localStorage.setItem('carrinho', JSON.stringify(carrinho));
 
-        
-        <div class="col-xl-4 col-sm-6 g-5">
-            <div class="card" style="background-color: transparent; border: none;">
-                <img src="img/construção/telha.webp" class="card-img-top" alt="Telha Ondulada Cimentícia Cinza 5mm 2,44x1,1m Brasilit">
-                <div class="card-body">
-                    <h5 class="card-title">Telha Ondulada Cimentícia Cinza 5mm 2,44x1,1m Brasilite
-                    <p class="card-text">R49,90</p>
-                    <button type="button" class="btn btn-primary btn-sm" onclick="adicionarAoCarrinho('Telha Ondulada Cimentícia Cinza 5mm 2,44x1,1m Brasilit', 49.90);" style="transition: all 0.3s ease; font-weight: bold; float: left;">
-                      Adicionar ao Carrinho
-                  </button>
-                  <a href="compra.html?produto=Camiseta+Classic+Fit+Typesetting&preco=85.90" class="btn btn-success btn-sm" style="transition: all 0.3s ease; font-weight: bold; float: center;">
-                      Comprar
-                  </a>
-                    </button>
-                </div>
-            </div>
-        </div>
+        alert(nomeProduto + " foi adicionado ao carrinho!");
+    }
 
-    </main>
-    <footer class="bg-orange text-white py-4 mt-auto">
-        <div class="container text-center">
-            <p><strong>Endereço:</strong> Rua Mariana, 360 - Centro, Ipatinga-MG</p>
-            <p><strong>Telefone:</strong> (31) 5678-1234</p>
-            <div class="d-flex justify-content-center gap-4 mt-3">
-                <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="text-white fs-4"><i class="bi bi-whatsapp"></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    function atualizarSacola() {
+        let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+        let qtdItens = carrinho.length;
+        document.getElementById('sacola').innerHTML = ' (' + qtdItens + ')';
+    }
+    window.onload = atualizarSacola;
+</script>
 </body>
 </html>

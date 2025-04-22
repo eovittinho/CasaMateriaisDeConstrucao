@@ -4,11 +4,11 @@ body {
     color: #333;
 }
 
-.text-orange {
+.text-blue {
     color: #1E90FF;
 }
 
-.bg-orange {
+.bg-blue {
     background-color: #1E90FF !important;
 }
 
@@ -23,4 +23,46 @@ footer a:hover {
 
 .navbar .nav-link:hover {
     text-decoration: underline;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text.preco {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.card {
+    border-radius: 10px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.btn-primary {
+    background-color: #1E90FF;
+    border-color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1E90FF;
+    border-color: #1E90FF;
+}
+
+.btn-success {
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+}
+
+.btn-success:hover {
+    background-color: #27ae60;
+    border-color: #27ae60;
 }
